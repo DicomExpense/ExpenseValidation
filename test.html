@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ExpenseValidation test</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.2.0/prototype.js"></script>
+		<script src="ExpenseValidation.js"></script>
+		<script src="ExpenseValidation.Options.js"></script>
+		<style type="text/css">
+			body
+			{
+				background: #f9f9f9;
+				margin: 100px 0px;
+				padding: 0px;
+				text-align: center;
+			}
+			
+			input
+			{
+				padding: 9px 15px;
+				font-size: 15px;
+				background: #fff;
+				border: 1px solid #f2f2f2;
+				color: #3c3c3b;
+				outline: none;
+			}
+			input:focus
+			{
+				border-color: #f39200;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<input type="text" id="ost" class="required" /><br />
+			<input type="checkbox" id="potatis" />
+			<script type="text/javascript">
+				var test = new ExpenseValidation('.required', {rules: ['email'], events: ['blur']});
+			</script>
+			
+			<button type="submit">Spara</button>
+			<button type="reset">Återställ</button>
+		</form>
+	</body>
+</html>
